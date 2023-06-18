@@ -15,10 +15,10 @@ const initialValues = {
 
 const ContactForm = ({ addContact }) => {
   
-  const handleSubmit = (values, {resetForm}) => {
-    addContact(values)
+  const handleSubmit = (values, { resetForm }) => {
+    addContact(values);
     resetForm();
-  }
+  };
 
   return (
     <Formik
