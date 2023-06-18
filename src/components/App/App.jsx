@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { nanoid } from 'nanoid'
-import ContactForm from "./ContactForm";
-import Filter from "./Filter";
-import ContactList from "./ContactList";
+import ContactForm from "../ContactForm";
+import Filter from "../Filter";
+import ContactList from "../ContactList";
+import { Title } from "./App.styled";
 
 export class App extends Component {
   state = {
@@ -48,9 +49,9 @@ export class App extends Component {
 
     return (
       <div>
-        <h2>Phonebook</h2>
-        <ContactForm onSubmit={this.addContact} />
-        <h2>Contacts</h2>
+        <Title>Phonebook</Title>
+        <ContactForm addContact={this.addContact} />
+        <Title>Contacts</Title>
         <Filter
           value={filter}
           onChange={this.changeFilter}
